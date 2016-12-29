@@ -42,10 +42,8 @@ public class BoardController {
 			boolean bemailPatternCheck = Pattern.matches(bemailPattern, board.getBemail());
 			
 			if ( !bemailPatternCheck ) {
-				logger.info("이메일 형식오류");
 				result = "Email Pattern Error";
 			} else {
-				logger.info("글쓰기 성공");
 				boardService.write(board);				
 			}
 		} catch (Exception e) {
@@ -72,7 +70,7 @@ public class BoardController {
 				result = "fail";
 			}
 		}
-
+		
 		model.addAttribute("result", result);
 		return "result";
 	}
