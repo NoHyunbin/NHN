@@ -44,7 +44,7 @@ public class BoardController {
 			if ( !bemailPatternCheck ) {
 				result = "Email Pattern Error";
 			} else {
-				boardService.write(board);				
+				boardService.write(board);
 			}
 		} catch (Exception e) {
 			result = "fail";
