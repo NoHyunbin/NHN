@@ -28,15 +28,15 @@ public class BoardServiceTest {
 	public void testWrite() {
 		// ------------ 글 쓰기 내용 부분 ------------ //
 		Board board = new Board();		
-		board.setBemail("JUnit_Test2@naver.com");
+		board.setBemail("JUnit_Test1@naver.com");
 		board.setBpassword("12345");
-		board.setBcontent("boardService.write Test2");
+		board.setBcontent("boardService.write Test1");
 		// ------------ 글 쓰기 내용 부분 ------------ //
 		
 		// 글쓰기 작업을 완료하면 성공
 		assertEquals("success", boardService.write(board));
 	}
-
+	
 	@Test
 	public void testList() {
 		// 글이 있으면 성공 
@@ -60,5 +60,4 @@ public class BoardServiceTest {
 		// 수정 작업을 완료하면 성공
 		assertEquals("success", boardService.modify(board));
 	}
-
 }
