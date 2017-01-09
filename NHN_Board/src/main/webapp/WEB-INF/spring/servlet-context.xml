@@ -34,7 +34,17 @@
 		<beans:property name="acquireIncrement" value="1"/>
 		<beans:property name="minPoolSize" value="1"/>
 	</beans:bean>
-		
+	
+	<!-- MyBatis -->
+<!-- <beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource"/>
+		<beans:property name="mapperLocations" value="classpath:com/nhnentertainment/freeboard/dao/*.xml"/>
+	</beans:bean>
+ 
+	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<beans:constructor-arg index="0" ref="sqlSessionFactory"/>
+	</beans:bean>
+ -->		
 	<!-- JdbcTemplate 객체 생성 -->
 	<beans:bean name="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<beans:property name="dataSource" ref="dataSource"/>
