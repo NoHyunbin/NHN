@@ -130,6 +130,12 @@
 			});
 		});
 		
+					if (isNes(inoutPlc)) {
+						$('#id_isueEmp_forNes').show()				// 주의사항(NES)
+					} else {
+						$('#id_isueEmp').show();				// 주의사항
+					}
+		
 		/* ------------------------------- 글쓰기 ------------------------------- */
 		/* 글쓰기 버튼 클릭 */
 		function onClickBtnWrite() {
